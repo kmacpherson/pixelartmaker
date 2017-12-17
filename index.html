@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>Pixel Art Maker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Pixel Art Maker</h1>
+  </header>
+  <div id=gridSetting>
+    <div class="gridInput"><label for="gridHeight">Grid Height: (max 32)</label><input class="gridItem" id=gridHeight type="number" min="0" max="32" value="16"></div>
+    <div class="gridInput"><label for="gridWidth">Grid Width: (max 32) </label><input class="gridItem" id="gridWidth" type="number"min="0" max="32" value="16"></div>
+    <div class="gridInput"><input class="gridItem" id="gridButton" type="button" value="Submit"></div>
+  </div>
+  <div id="colourPicker">
+    <div class="gridInput"><label for="gridColour">Pick a colour:<label><input class="gridItem" id="gridColour" type="color" defaultValue"#42f4f4"></div>
+  </div>
+  <div id="gridDisplay">
+    <div id="displayHeader">Design Canvas</div>
+    <div id="gridMain"></div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
