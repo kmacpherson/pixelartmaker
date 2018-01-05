@@ -71,7 +71,7 @@ header {
   width: 20px;
 }
 
-#errorDiv {
+.errorDiv {
   width: 100%;
   font-size: 1em;
   color: red;
