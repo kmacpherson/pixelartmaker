@@ -57,13 +57,16 @@ let makeGrid = function() {
       };
     };
 
+    //create function for listener so we only load one function in memoery.
+
+    const changeColour = function (evt) {
+      const gridColour = document.querySelector('#gridColour').value;
+      evt.target.style.backgroundColor = gridColour;
+    }
     const gridCell = document.querySelectorAll(".gridBox");
     // Creates a listener for the clicks within the area of the grid and changing the colour of the background to the color selected by the colour picker.
     for (let i = 0; i < gridCell.length; i++) {
-      gridCell[i].addEventListener('click', function(evt) {
-      const gridColour = document.querySelector('#gridColour').value;
-      evt.target.style.backgroundColor = gridColour;
-      });
+      gridCell[i].addEventListener('click', changeColour);
     };
   };
 };
