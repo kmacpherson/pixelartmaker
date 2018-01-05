@@ -11,7 +11,7 @@ let makeGrid = function() {
   const gridMain = document.querySelector('#gridMain');
 
   // Remove the error on submition.
-  const errorDisp = document.querySelector("#errorDiv");
+  const errorDisp = document.querySelector(".errorDiv");
 
   let gribRow, gridBox;
 
@@ -29,10 +29,11 @@ let makeGrid = function() {
   } else {
 
     // Remove the grid on resubmition or it will add to current grid.
-    const gridX = document.querySelector(".gridRow");
+    const gridX = document.querySelectorAll(".gridRow");
 
     if (gridX !== null) {
-        gridX.remove();
+      for (let i = 0; i < gridX.length; i++)
+        gridX[i].remove();
     }
 
     // Create the grid by adding the right amout of rows then adding the proper amount of boxes.
